@@ -5,6 +5,7 @@
 .cache
 .history
 .lib/
+out
 .idea
 .worksheet
 dist/*
