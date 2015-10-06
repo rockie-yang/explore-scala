@@ -24,7 +24,7 @@ object StringSpecification extends Properties("String") {
 
 
 class StringSpecification extends FlatSpec with Checkers with Matchers{
- "A String concatenation" should "start with first string" in {
+ "String concatenation a + b" should "startsWith a" in {
    check { (a: String, b: String) =>
        (a+b).startsWith(a)
    }

@@ -50,6 +50,7 @@
         </dependency>
     </dependencies>
     <build>
+        <testSourceDirectory>src/main/scala</testSourceDirectory>
         <plugins>
             <!-- disable surefire -->
             <plugin>
