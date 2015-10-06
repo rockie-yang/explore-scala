@@ -1,6 +1,6 @@
 package utils
 
-object Id {
-  def id(obj: AnyRef) =
+object id {
+  def apply(obj: AnyRef) =
     Integer.toHexString(System.identityHashCode(obj))
 }
