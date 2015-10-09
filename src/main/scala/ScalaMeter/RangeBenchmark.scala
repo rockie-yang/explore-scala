@@ -14,3 +14,8 @@ object RangeBenchmark
     }
   }
 }
+
+object Explore extends App{
+  val sizes = Gen.range("size")(300000, 1500000, 300000)
+  println(sizes)
+}
