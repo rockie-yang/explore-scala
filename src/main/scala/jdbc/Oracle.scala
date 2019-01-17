@@ -35,7 +35,7 @@ object Oracle {
         //step2 create  the connection object
         connection = DriverManager.getConnection(
           "jdbc:oracle:thin:@localhost:1521:xe","system","oracle");
-
+//        jdbc:oracle:thin:@10.0.11.44:1521:xe
 
         // create the statement, and run the select query
         val statement = connection.createStatement()
@@ -43,6 +43,8 @@ object Oracle {
         statement.execute("create table test(id number(10) not null, name varchar2(50) not null)")
         statement.execute("insert into test(id, name) values(1, 'rockie')")
         statement.execute("insert into test(id, name) values(2, 'yang')")
+
+        connection.commit()
 
         val resultSet: ResultSet = statement.executeQuery("SELECT id, name from test")
         while ( resultSet.next() ) {
